@@ -169,3 +169,8 @@ async def health():
 from flet_app import build_flet_app
 app.mount("/app", FletApp(build_flet_app()))
 app.mount("/static", StaticFiles(directory="static"), name="static")
+from flet_fastapi import FletApp
+from flet_app import build_flet_app
+
+app.mount("/app", FletApp(build_flet_app()))
+app.mount("/static", StaticFiles(directory="static"), name="static")
